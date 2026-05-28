@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        >
+
+        <!-- varias imagenes -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager_imagenes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="2"/>
+
+        <TextView
+            android:id="@+id/txt_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/txt_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <!-- txt tallas -->
+        <TextView
+            android:id="@+id/titulo_tallas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Tallas disponibles"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        
+    
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
+
+            <GridLayout
+                android:id="@+id/radioGroup_tallas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:padding="8dp">
+
+
+            </GridLayout>
+        </HorizontalScrollView>
+
+        <!-- producto agotado -->
+        <TextView
+            android:id="@+id/txt_sin_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="PRODUCTO AGOTADO"
+            android:textColor="@color/rojo_error"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"/>
+            
+         <!-- producto agotado -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_anadir"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:text="Añadir al carrito"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            app:backgroundTint="@color/colorPrimary"/>
+
+    </LinearLayout>
+</ScrollView>

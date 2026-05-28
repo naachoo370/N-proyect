@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/white">
+
+  
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp">
+
+        <!-- buscador -->
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Buscar por cliente o fecha..."
+            android:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            android:background="@color/white"
+            android:layout_margin="4dp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- recyclerView de lista pedidos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="72dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/admin_item_pedido" />
+
+    <!-- Btn filtar-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFiltrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="Filtrar pedidos"
+        app:srcCompat="@drawable/filtrar_fondo"
+        app:tint="@android:color/white"
+        app:backgroundTint="?attr/colorPrimary" />
+</LinearLayout>

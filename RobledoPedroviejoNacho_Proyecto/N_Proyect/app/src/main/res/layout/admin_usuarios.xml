@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F4F6">
+
+    <TextView
+        android:id="@+id/tituloUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Usuarios"
+        android:textSize="22sp"
+        android:textColor="#1E3A8A"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="24dp"
+        android:letterSpacing="0.03"
+        android:elevation="2dp"/>
+
+    <!-- buscador -->
+    <SearchView
+        android:id="@+id/buscadorUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Buscar por correo..."
+        android:background="@drawable/barra_busqueda"
+        android:layout_marginBottom="16dp"
+        android:elevation="1dp"/>
+<!-- recyclerView lista usuarios -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"/>
+
+</LinearLayout>

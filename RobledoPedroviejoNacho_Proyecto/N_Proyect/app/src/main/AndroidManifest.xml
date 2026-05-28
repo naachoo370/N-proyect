@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.N_Proyect"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".inicio.tienda_pantallaPrincipal"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividades principales -->
+        <activity android:name=".inicio.tienda_inicioSesion" android:exported="true"/>
+        <activity android:name=".inicio.tienda_registro" android:exported="true"/>
+        <activity android:name=".Admin.admin_pantallaPrincipal" android:exported="true"/>
+        <activity android:name=".Admin.admin_usuarios" android:label="Gestión de Usuarios" android:exported="false"/>
+        <activity android:name=".Cliente.cliente_PantallaPrincipal" android:exported="true" android:label="Menú Cliente"/>
+        <activity android:name=".Cliente.cliente_usuario" android:exported="false" android:label="Mi Perfil"/>
+
+        <!-- Actividades de productos -->
+        <activity android:name=".ProductosHombre.ProductosCamisetasHombre" android:label="Camisetas Hombre" android:exported="false"/>
+        <activity android:name=".ProductosMujer.ProductosCamisetasMujer" android:label="Camisetas Hombre" android:exported="false"/>
+        <activity android:name=".ProductosHombre.ProductosSudaderaHombre" android:label="Sudaderas Hombre" android:exported="false"/>
+        <activity android:name=".ProductosMujer.ProductosSudaderaMujer" android:label="Sudaderas Mujer" android:exported="false"/>
+        <activity android:name=".ProductosHombre.ProductosPantalonesHombre" android:label="Pantalones Hombre" android:exported="false"/>
+        <activity android:name=".ProductosMujer.ProductosPantalonesMujer" android:label="Pantalones Mujer" android:exported="false"/>
+        <activity android:name=".ProductosHombre.ProductosPolosHombre" android:label="Polos Hombre" android:exported="false"/>
+        <activity android:name=".ProductosHombre.ProductosAbrigosHombre" android:label="Abrigos Hombre" android:exported="false"/>
+        <activity android:name=".ProductosMujer.ProductosAbrigosMujer" android:label="Abrigos mujer" android:exported="false"/>
+        <activity android:name=".ProductosMujer.ProductosPuntoMujer" android:label="Punto Mujer" android:exported="false"/>
+        <activity android:name=".Cliente.cliente_datosProducto" android:label="Detalle del Producto" android:exported="false"/>
+
+        <!-- Gestión de productos (admin) -->
+        <activity
+            android:name=".Admin.admin_productos"
+            android:label="Gestión de Productos"
+            android:exported="false"
+            android:parentActivityName=".Admin.admin_pantallaPrincipal"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".Cliente.cliente_carrito"
+            android:label="Carrito de Compras"
+            android:exported="false"
+            android:parentActivityName=".Cliente.cliente_datosProducto"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name=".Cliente.cliente_novedades"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".inicio.tienda_pantallaPrincipal"/>
+
+        <activity android:name=".Admin.admin_stock" />
+        <activity
+            android:name=".Admin.admin_pedidos"
+            android:label="Gestión de Pedidos"
+            android:parentActivityName=".Admin.admin_pantallaPrincipal" />
+
+        <activity
+            android:name=".Cliente.cliente_compras"
+            android:label="Mis Compras"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Cliente.cliente_productosComprados"
+            android:label="Detalles de Compra"
+            android:parentActivityName=".Cliente.cliente_compras"/>
+
+        <activity
+            android:name=".Cliente.cliente_pago"
+            android:label="Proceso de pago"/>
+
+
+
+
+
+    </application>
+
+
+
+</manifest>

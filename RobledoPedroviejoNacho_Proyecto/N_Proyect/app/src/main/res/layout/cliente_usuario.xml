@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a5cbcc"
+    tools:context=".Cliente.cliente_usuario">
+
+    
+    <ScrollView
+        android:id="@+id/contenido_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/barra_navegacion"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ico perfil y correo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/imagen_perfil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cuenta"
+                    android:contentDescription="Foto de perfil"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tv_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="correo"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- mis compras -->
+                <LinearLayout
+                    android:id="@+id/btn_mis_compras"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mis compras"
+                        android:textColor="#000000"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+
+                <!-- separacion -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <!-- datos personales -->
+                <LinearLayout
+                    android:id="@+id/btn_datos_personales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Datos personales"
+                        android:textColor="#000000"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+
+                <!-- separacion -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <!-- cerrar sesion -->
+                <LinearLayout
+                    android:id="@+id/btn_cerrar_sesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cerrar sesión"
+                        android:textColor="#F44336"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- nav -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:orientation="horizontal">
+
+        <!-- inicio -->
+        <LinearLayout
+            android:id="@+id/nav_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textColor="#a5cbcc"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- menu -->
+        <LinearLayout
+            android:id="@+id/nav_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/menu"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menú"
+                android:textColor="#a5cbcc"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- carrito -->
+        <LinearLayout
+            android:id="@+id/nav_carrito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/carro"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrito"
+                android:textColor="#a5cbcc"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- cuenta -->
+        <LinearLayout
+            android:id="@+id/nav_cuenta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cuenta"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuenta"
+                android:textColor="#a5cbcc"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

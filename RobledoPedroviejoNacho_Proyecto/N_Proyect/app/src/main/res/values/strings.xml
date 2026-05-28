@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">N_Proyect</string>
+    <string-array name="roles_array">
+        <item>cliente</item>
+        <item>admin</item>
+    </string-array>
+    <string-array name="roles_usuario">
+        <item>cliente</item>
+        <item>admin</item>
+    </string-array>
+    <string name="imagen_producto">Imagen del producto</string>
+    <string name="inicio">Inicio</string>
+    <string name="menu">Menú</string>
+    <string name="carrito">Carrito</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="seleccionar_talla">talla</string>
+    <string-array name="estados_pedido">
+        <item>pendiente</item>
+        <item>enviado</item>
+        <item>entregado</item>
+        <item>cancelado</item>
+    </string-array>
+
+    <string-array name="metodos_pago">
+        <item>Tarjeta</item>
+        <item>Bizum</item>
+    </string-array>
+
+
+</resources>

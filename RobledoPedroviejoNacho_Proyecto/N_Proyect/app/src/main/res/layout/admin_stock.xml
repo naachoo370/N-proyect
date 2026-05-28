@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingTop="100dp"
+    android:background="@color/light_gray">
+
+    <!-- buscador -->
+    <EditText
+        android:id="@+id/etBuscarStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar producto..."
+        android:inputType="text"
+        android:background="@drawable/busqueda_productos"
+        android:padding="12dp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"/>
+
+    <!-- recyclerView lista de prodc en stock -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TUS DATOS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!--txt correo -->
+    <TextView
+        android:id="@+id/tv_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo: "
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- txt telefono -->
+    <TextView
+        android:id="@+id/tv_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teléfono: Sin teléfono"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- txt dirrecion -->
+    <TextView
+        android:id="@+id/tv_direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dirección: Sin dirección"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- btn act correo y contraseña -->
+    <Button
+        android:id="@+id/btn_actualizar_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR CORREO Y CONTRASEÑA"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- btn act telefono y dirrecion  -->
+    <Button
+        android:id="@+id/btn_actualizar_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR TELÉFONO Y DIRECCION"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- btn borrar -->
+    <Button
+        android:id="@+id/btn_eliminar_cuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR CUENTA"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

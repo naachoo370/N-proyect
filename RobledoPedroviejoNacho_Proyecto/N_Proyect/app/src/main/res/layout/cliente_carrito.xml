@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a5cbcc"
+    tools:context=".Cliente.cliente_carrito">
+
+    <!-- scroll lista del carrito -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_total"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- recyclerView lista de productos en el carrito -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_carrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:listitem="@layout/cliente_item_carrito" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/barra_navegacion"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:clipToPadding="false"
+        android:paddingBottom="32dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <!-- txt total -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total:"
+                android:textColor="#263238"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00796B"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- btn pago -->
+        <Button
+            android:id="@+id/btn_pagar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#00796B"
+            android:elevation="4dp"
+            android:text="Proceder al pago"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- nav  -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <!-- btn inicio -->
+        <LinearLayout
+            android:id="@+id/nav_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/home"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="12sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- btn menu-->
+        <LinearLayout
+            android:id="@+id/nav_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/menu"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menú"
+                android:textSize="12sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- btn carrito -->
+        <LinearLayout
+            android:id="@+id/nav_carrito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/carro"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrito"
+                android:textSize="12sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- btn cuenta -->
+        <LinearLayout
+            android:id="@+id/nav_cuenta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/cuenta"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuenta"
+                android:textSize="12sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

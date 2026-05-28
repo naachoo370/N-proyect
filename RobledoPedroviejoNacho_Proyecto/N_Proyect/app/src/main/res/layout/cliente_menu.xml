@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a5cbcc"
+    tools:context=".Cliente.cliente_PantallaPrincipal">
+
+    <!-- logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- tabs Mujer/Hombre -->
+    <LinearLayout
+        android:id="@+id/tabs_genero"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tabs_fondo"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tab_mujer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Mujer"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:background="#7FA7A8"/>
+
+        <TextView
+            android:id="@+id/tab_hombre"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Hombre"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/contenedor_vistas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintTop_toBottomOf="@id/tabs_genero"
+        app:layout_constraintBottom_toTopOf="@id/barra_navegacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- mujer-->
+        <ScrollView
+            android:id="@+id/vista_mujer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:overScrollMode="never"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- camisetas-->
+                <LinearLayout
+                    android:id="@+id/mujer_camisetas"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/categoria_item"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Camisetas"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                </LinearLayout>
+
+                <!-- punto -->
+                <LinearLayout
+                    android:id="@+id/mujer_punto"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/categoria_item"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Punto"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- sudaderas -->
+                <LinearLayout
+                    android:id="@+id/mujer_sudaderas"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sudaderas"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!--chaquetas-->
+                <LinearLayout
+                    android:id="@+id/mujer_chaquetas"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/categoria_item"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Chaquetas"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- pantalones -->
+                <LinearLayout
+                    android:id="@+id/mujer_pantalones"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pantalones"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+    </ScrollView>
+
+        <!-- hombre -->
+        <ScrollView
+            android:id="@+id/vista_hombre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- camisetas -->
+                <LinearLayout
+                    android:id="@+id/hombre_camisetas"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Camisetas"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- sudaderas -->
+                <LinearLayout
+                    android:id="@+id/hombre_sudaderas"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sudaderas"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- polos -->
+                <LinearLayout
+                    android:id="@+id/hombre_polos"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/categoria_item"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Polos"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- pantalones -->
+                <LinearLayout
+                    android:id="@+id/hombre_pantalones"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pantalones"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- abrigos -->
+                <LinearLayout
+                    android:id="@+id/hombre_abrigos"
+                    android:background="@drawable/categoria_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Abrigos"
+                        android:textSize="18sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- nav -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- inicio -->
+        <LinearLayout
+            android:id="@+id/nav_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="10sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- menu -->
+        <LinearLayout
+            android:id="@+id/nav_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/menu"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menú"
+                android:textSize="10sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- carrito -->
+        <LinearLayout
+            android:id="@+id/nav_carrito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/carro"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrito"
+                android:textSize="10sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+
+        <!-- cuenta -->
+        <LinearLayout
+            android:id="@+id/nav_cuenta"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cuenta"
+                app:tint="#a5cbcc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuenta"
+                android:textSize="10sp"
+                android:textColor="#a5cbcc" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+# Ignore the huge zip
+RobledoPedroviejoNacho_Proyecto.zip
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Gradle and IDE files
+.gradle/
+.idea/
+build/
+local.properties
+*.iml
+
+# Android specific
+.externalNativeBuild/
+.cxx/
+captures/

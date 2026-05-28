@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_primary">#3F51B5</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="gray">#808080</color>
+    <color name="selecciono">#757575</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="colorPrimary2">#a5cbcc</color>
+    <color name="verde">#4CAF50</color>
+    <color name="gris_deshabilitado">#808080</color>
+    <color name="gris_medio">#9E9E9E</color>
+    <color name="rojo">#FF0000</color>
+    <color name="bg_estado_pendiente">#FFF3E0</color>
+    <color name="bg_estado_enviado">#E3F2FD</color>
+    <color name="bg_estado_entregado">#E8F5E9</color>
+    <color name="bg_estado_cancelado">#FFEBEE</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="card_stroke_color">#EEEEEE</color>
+    <color name="text_primary">#FF212121</color> <!-- Negro oscuro -->
+    <color name="rojo_error">#D32F2F</color>
+    <color name="rojo_error_light">#FFCDD2</color>
+    <color name="colorPrimaryLight">#E8EAF6</color>
+    <color name="gris_borde">#BDBDBD</color>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+            <!-- txt nombtre del prudc-->
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDescripcionProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+
+        <!-- scroll horizontal para las tallas -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- XS -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XS"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadXS"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                         />
+                </LinearLayout>
+
+                <!-- S -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadS"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                         />
+                </LinearLayout>
+
+                <!-- M -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadM"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                         />
+                </LinearLayout>
+
+                <!-- L -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="L"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadL"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+                <!-- XL -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XL"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadXL"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+                <!-- XXL -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XXL"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCantidadXXL"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <!-- btn guardar -->
+        <Button
+            android:id="@+id/btnGuardarStock"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="2dp"
+            android:text="Guardar Cambios"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+             />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

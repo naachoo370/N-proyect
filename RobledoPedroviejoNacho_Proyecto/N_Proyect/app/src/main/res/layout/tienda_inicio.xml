@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a5cbcc"
+    tools:context=".inicio.tienda_pantallaPrincipal">
+
+    <!-- logo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- titulo -->
+    <TextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="¿Qué me pongo?"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_logo" />
+
+    <!-- subtitulo -->
+    <TextView
+        android:id="@+id/txt_subtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="Vive una experiencia personalizada"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_titulo" />
+
+    <!-- imagen principal -->
+    <ImageView
+        android:id="@+id/img_principal"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inicio_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_subtitulo" />
+
+    <!-- btn iniciar sesion -->
+    <Button
+        android:id="@+id/btn_iniciar_sesion"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:elevation="4dp"
+        android:text="Iniciar sesión"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_principal" />
+
+    <!-- btn registro -->
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="4dp"
+        android:text="Regístrate ahora"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_iniciar_sesion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- numero del pedido y estado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_numero_pedido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Pedido #1234"/>
+
+            <TextView
+                android:id="@+id/chip_estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo2"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:text="ENTREGADO"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gris_medio"
+            android:textSize="14sp"
+            android:text="Fecha: 2023-05-30"/>
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FF6F00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Total: €99.99"/>
+
+        <!-- btn detalles -->
+        <Button
+            android:id="@+id/btn_detalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btnn_naran"
+            android:text="Ver Detalles"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
